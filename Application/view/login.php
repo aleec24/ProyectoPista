@@ -13,6 +13,7 @@
     <title>Inicio de Sesión</title>
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/simple-sidebar.css" rel="stylesheet">
+    <link href="../css/login-container.css" rel="stylesheet">
 
 </head>
 
@@ -42,47 +43,64 @@
                 </div>
             </nav>
 
-            <div class="container-fluid" style="margin-top:100px;">
+            <div class="d-flex justify-content-center align-items-center mt-5">
 
-                <div class="row">
-                    <div class="col-3">
+
+                <div class="card">
+
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item text-center">
+                            <a class="nav-link active btl" id="pills-home-tab" data-toggle="pill" href="#pills-home"
+                                role="tab" aria-controls="pills-home" aria-selected="true">Iniciar Sesion</a>
+                        </li>
+                        <li class="nav-item text-center">
+                            <a class="nav-link btr" id="pills-profile-tab" data-toggle="pill" href="#pills-profile"
+                                role="tab" aria-controls="pills-profile" aria-selected="false">Registrate!</a>
+                        </li>
+
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                            aria-labelledby="pills-home-tab">
+
+                            <div class="form px-4 pt-5">
+
+                                <input type="text" name="" class="form-control" placeholder="Usuario">
+
+                                <input type="text" name="" class="form-control" placeholder="Contraseña">
+                                <button class="btn btn-dark btn-block">Entrar</button>
+                                <label id="lblForgotPswd">¿Has olvidado tu contraseña?</label>
+
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                            aria-labelledby="pills-profile-tab">
+
+
+                            <div class="form px-4">
+
+                                <input type="text" name="" class="form-control" placeholder="Nombre Completo">
+
+                                <input type="text" name="" class="form-control" placeholder="Usuario">
+
+                                <input type="text" name="" class="form-control" placeholder="Contraseña">
+
+                                <button class="btn btn-dark btn-block">Registrarse</button>
+
+                            </div>
+
+
+
+                        </div>
+
                     </div>
-                    <div class="col-2">
-                        <br>
-                        <label><b>Usuario:</b></label>
-                    </div>
-                    <div class="col-4">
-                        <input type="text" id="txtUsuario" name="txtUsuario" value="" placeholder="Ingrese su usuario."
-                            onblur="LlamarServicioApi_AJAX();">
-                    </div>
-                    <div class="col-3">
-                    </div>
+
+
+
+
                 </div>
 
-                <div class="row" id="divContrasenna">
-                    <div class="col-3">
-                    </div>
-                    <div class="col-2">
-                        <br>
-                        <label><b>Contraseña:</b></label>
-                    </div>
-                    <div class="col-4">
-                        <input type="password" id="txtContrasenna" name="txtContrasenna" value="">
-                    </div>
-                    <div class="col-3">
-                    </div>
-                </div>
-                <br><br>
-
-                <div class="row">
-                    <div class="col-5">
-                    </div>
-                    <div class="col-4">
-                        <input type="submit" id="btnLogin" name="btnLogin" value="Iniciar Sesión" class="btnLogin" />
-                    </div>
-                    <div class="col-3">
-                    </div>
-                </div>
 
             </div>
         </div>
