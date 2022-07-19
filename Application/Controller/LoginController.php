@@ -15,7 +15,7 @@
 
             $item = mysqli_fetch_array($resultado);
             $_SESSION["NombreUsuario"] = $item["Nombre"];
-            $_SESSION["RolUsuario"] = $item["IdRol"];
+            //$_SESSION["RolUsuario"] = $item["IdRol"];
             header("Location: inicio.php");
         }
         
