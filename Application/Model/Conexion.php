@@ -5,7 +5,7 @@
         $server = "localhost:3307";
         $user = "root";
         $password = "";
-        $database = "pistacarreras";
+        $database = "PistaCarreras";
 
         return mysqli_connect($server, $user, $password, $database);
     }
