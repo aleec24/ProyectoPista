@@ -4,13 +4,64 @@ function MostrarMenu()
 
 {
     echo
-        '<div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading">Start </div>
-      <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard...</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
-      </div>
-    </div>';
+        '<div class="navbar">
+        <div class= "logo">
+          <h1> LOGO </h1>
+          
+  </div>
+  
+  <div class= "icon-bar">
+    <a href="#"><i class="fa-solid fa-house"> </i>
+      <div class="menu-items">
+        Home
+  </div>
+  </a>
+  <a href="#"><i class="fa-solid fa-users"></i>
+      <div class="menu-items">
+        Usuarios
+  </div>
+   
+  </a>
+  <a href="#"><i class="fa-solid fa-people-group"> </i>
+      <div class="menu-items">
+        Pilotos
+  </div>
+  
+  </a>
+  <a href="#"><i class="fa-solid fa-flag-checkered"></i>
+      <div class="menu-items">
+        Carreras
+  </div>
+   
+  </a>
+  <a href="#"><i class="fa-solid fa-road"></i> </i>
+      <div class="menu-items">
+        Pistas
+  </div>
+   
+  </a>
+  <a href="#"><i class="fa-solid fa-car-rear"> </i>
+      <div class="menu-items">
+        Vehiculos
+  </div>
+   
+  </a>
+  <a href="#"><i class="fa-solid fa-user"></i>
+      <div class="menu-items">
+        Mi cuenta
+  </div>
+   
+  </a>
+  <a href="#"><i class="fa-solid fa-right-from-bracket"></i>
+      <div class="menu-items">
+      
+  </div>
+   
+  </a>
+  
+  </div>
+  </div>
+  ';
 
 }
 
