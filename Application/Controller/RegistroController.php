@@ -12,7 +12,7 @@ if (isset($_POST["btnRegistro"])) {
     $Rol = 2;
 
     RegistrarUsuariosModel($correo, $Contrasenna, $Nombre, $Apellido, $Edad, $Rol);
-    header("Location: login.php");
+    echo "<script type='text/javascript'>alert('El registro fue exitoso! Por favor ingrese sus nuevas credenciales.');</script>";
 }
 
 ?>
