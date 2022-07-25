@@ -118,6 +118,20 @@ begin
 	select * from Usuario;
 end; //
 
+delimiter //
+
+create procedure ConsultarPilotos()
+begin
+	select * from Piloto;
+end; //
+
+delimiter //
+
+create procedure ConsultarVehiculos()
+begin
+	select * from Vehiculo;
+end; //
+
 /*Creacion Procedimiento Inicio Sesion*/
 
 DELIMITER $$
