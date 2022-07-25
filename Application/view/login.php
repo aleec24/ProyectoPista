@@ -1,6 +1,6 @@
 <?php
 include_once '../Controller/LoginController.php';
-include_once '../Controller/RegisterController.php';
+include_once '../Controller/RegistroController.php';
 ?>
 
 <!DOCTYPE html>
