@@ -118,4 +118,21 @@ begin
 	select * from Usuario;
 end; //
 
+/*Creacion Procedimiento Inicio Sesion*/
+
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ValidarLogin`(IN `pCorreo` VARCHAR(25), IN `pContrasenna` VARCHAR(25))
+BEGIN
+
+	SELECT	usuarioID, Correo, Nombre, U.rolID, R.descripcionRol
+    FROM 	usuario U
+    INNER JOIN rol R ON U.rolID = R.rolID
+    WHERE 	U.correo = pCorreo 
+		AND	U.contrasena = pContrasenna;
+
+END$$
+DELIMITER ;
+
+
+
 
