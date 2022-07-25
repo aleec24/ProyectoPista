@@ -50,10 +50,11 @@ include_once '../Controller/RegistroController.php';
 
                                 <div class="form px-4 pt-5">
 
-                                    <input type="text" name="txtCorreo" class="form-control" placeholder="Correo">
+                                    <input type="text" name="txtCorreo" class="form-control" placeholder="Correo"
+                                        title="Correo Registrado.">
 
                                     <input type="password" name="txtContrasenna" class="form-control"
-                                        placeholder="Contraseña">
+                                        placeholder="Contraseña" title="Contraseña del Usuario.">
 
                                     <button type="submit" id="btnLogin" name="btnLogin"
                                         class="btn btn-dark btn-block">Entrar</button>
@@ -72,14 +73,18 @@ include_once '../Controller/RegistroController.php';
 
                                 <div class="form px-4">
 
-                                    <input type="text" name="txtNombre" class="form-control" placeholder="Nombre">
+                                    <input type="text" name="txtNombre" class="form-control" placeholder="Nombre"
+                                        title="Nombre sin espacios.">
 
-                                    <input type="text" name="txtApellido" class="form-control" placeholder="Apellido">
+                                    <input type="text" name="txtApellido" class="form-control" placeholder="Apellido"
+                                        title="Primer apellido sin espacios.">
 
-                                    <input type="text" name="txtCorreoReg" class="form-control" placeholder="Correo">
+                                    <input type="text" name="txtCorreoReg" class="form-control" placeholder="Correo"
+                                        title="Formato: nombre@correo.com">
 
                                     <input type="password" id="txtContrasennaReg" name="txtContrasennaReg"
-                                        class="form-control" placeholder="Contraseña">
+                                        class="form-control" placeholder="Contraseña"
+                                        title="Debe contener al menos 8 caracteres, un caracter especial y un número.">
 
                                     <button type="submit" id="btnRegistro" name="btnRegistro"
                                         class="btn btn-dark btn-block">Registrarse</button>
