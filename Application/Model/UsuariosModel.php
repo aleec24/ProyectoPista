@@ -6,7 +6,7 @@ function ConsultarUsuariosModel()
 {
     $instancia = AbrirBaseDatos();
     $listaUsuarios = $instancia->query("CALL ConsultarUsuarios();");
-    CerrarBaseDatos($listaUsuarios);
+    CerrarBaseDatos($instancia);
 
     return $listaUsuarios;
 }
