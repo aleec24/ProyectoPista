@@ -13,7 +13,8 @@ if (isset($_POST["btnLogin"])) {
 
         $item = mysqli_fetch_array($resultado);
         $_SESSION["NombreUsuario"] = $item["Nombre"];
-        //$_SESSION["RolUsuario"] = $item["IdRol"];
+        $_SESSION["RolUsuario"] = $item["rolID"];
+
         header("Location: inicio2.php");
     }
 

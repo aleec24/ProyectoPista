@@ -1,4 +1,7 @@
-<?php include_once "../Controller/LoginController.php"; ?>
+<?php
+include_once '../Controller/LoginController.php';
+include_once '../Controller/UsuariosController.php';
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -65,25 +68,24 @@
                         <div class="tab-pane fade" id="pills-profile" role="tabpanel"
                             aria-labelledby="pills-profile-tab">
 
+                            <form action="" method="POST">
+                                <div class="form px-4">
 
-                            <div class="form px-4">
+                                    <input type="text" name="txtNombre" class="form-control" placeholder="Nombre">
 
-                                <input type="text" name="txtNombre" class="form-control" placeholder="Nombre">
+                                    <input type="text" name="txtApellido" class="form-control" placeholder="Apellido">
 
-                                <input type="text" name="txtApellido" class="form-control" placeholder="Apellido">
+                                    <input type="text" name="txtCorreoReg" class="form-control" placeholder="Correo">
 
-                                <input type="text" name="txtCorreoReg" class="form-control" placeholder="Correo">
+                                    <input type="password" id="txtContrasennaReg" name="txtContrasennaReg"
+                                        class="form-control" placeholder="Contraseña">
 
-                                <input type="password" id="txtContrasennaReg" name="txtContrasennaReg"
-                                    class="form-control" placeholder="Contraseña">
+                                    <button type="submit" id="btnRegistro" name="btnRegistro"
+                                        class="btn btn-dark btn-block">Registrarse</button>
 
-                                <button type="submit" class="btn btn-dark btn-block">Registrarse</button>
-
-                            </div>
-
-
-
+                                </div>
                         </div>
+                        </form>
 
                     </div>
 

@@ -1,14 +1,21 @@
 <?php
 
-    include "Conexion.php";
+include_once "Conexion.php";
 
-    function ConsultarUsuariosModel()
-    {    
-        $instancia = AbrirBaseDatos();
-        $listaCodigos = $instancia -> query("CALL ConsultarUsuarios();");
-        CerrarBaseDatos($instancia);
-    
-        return $listaCodigos;
-    }
+function ConsultarUsuariosModel()
+{
+    $instancia = AbrirBaseDatos();
+    $listaUsuarios = $instancia->query("CALL ConsultarUsuarios();");
+    CerrarBaseDatos($listaUsuarios);
+
+    return $listaCodigos;
+}
+
+function RegistrarUsuariosModel($Correo, $Contrasenna, $Nombre, $Apellido, $Edad, $Rol)
+{
+    $instancia = AbrirBaseDatos();
+    $instancia->query("CALL RegistroUsuario('$Correo', '$Contrasenna', '$Nombre', '$Apellido','$Edad', $Rol);");
+    CerrarBaseDatos($instancia);
+}
 
 ?>
