@@ -1,6 +1,6 @@
 <?php
 include_once '../Controller/LoginController.php';
-include_once '../Controller/UsuariosController.php';
+include_once '../Controller/RegisterController.php';
 ?>
 
 <!DOCTYPE html>
@@ -69,6 +69,7 @@ include_once '../Controller/UsuariosController.php';
                             aria-labelledby="pills-profile-tab">
 
                             <form action="" method="POST">
+
                                 <div class="form px-4">
 
                                     <input type="text" name="txtNombre" class="form-control" placeholder="Nombre">
@@ -85,6 +86,7 @@ include_once '../Controller/UsuariosController.php';
 
                                 </div>
                         </div>
+
                         </form>
 
                     </div>
