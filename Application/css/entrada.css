@@ -128,3 +128,9 @@ body {
 .emergencias {
     color: #4B70A7;
 }
+
+.btn-primary {
+	color: #fff !important;
+	background-color: #FF0000 !important;
+	border-color: #AF0404 !important;
+}
