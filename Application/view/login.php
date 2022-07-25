@@ -49,7 +49,7 @@
 
                                 <input type="text" name="" class="form-control" placeholder="Contraseña">
                                 <button class="btn btn-dark btn-block">Entrar</button>
-                                <label id="lblForgotPswd">¿Has olvidado tu contraseña?</label>
+                                <label id="lblForgotPswd"><br>¿Has olvidado tu contraseña?</label>
 
                             </div>
 

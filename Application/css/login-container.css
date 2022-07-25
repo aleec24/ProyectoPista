@@ -1,17 +1,20 @@
 body{
 
-    background-color: #252525;
+  background-image: url('../img/carro-login.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size:cover;
   }
   
   .card{
   
-    width: 500px;
+    width: 552px;
     height: 30px;
     border:none;
     position:absolute; 
     position: fixed;
-    top: 40%;
-    left: 50%;
+    top: 24%;
+    left: 24%;
     transform: translate(-50%, -50%);
 
   }
@@ -59,15 +62,15 @@ body{
   }
   
   .form{
-    padding: 10px;
-    height: 300px;
-    width: 500px;
+    padding: 40px;
+    height: 350px;
+    width: 550px;
     background-color: #414141;
     border: #AF0404;
   }
   
   .form input{
-    margin-bottom: 12px;
+    margin-bottom: 30px;
     border-radius: 3px;
   }
   
