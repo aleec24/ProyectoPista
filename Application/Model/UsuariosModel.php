@@ -8,7 +8,7 @@ function ConsultarUsuariosModel()
     $listaUsuarios = $instancia->query("CALL ConsultarUsuarios();");
     CerrarBaseDatos($listaUsuarios);
 
-    return $listaCodigos;
+    return $listaUsuarios;
 }
 
 function RegistrarUsuariosModel($Correo, $Contrasenna, $Nombre, $Apellido, $Edad, $Rol)
