@@ -1,14 +1,14 @@
 <?php
 
-    include "Conexion.php";
+include "Conexion.php";
 
-    function ValidarIngresoModel($cedula, $contrasenna)
-    {    
-        $instancia = AbrirBaseDatos();
-        $usuario = $instancia -> query("CALL ValidarIngresoSP('$cedula', '$contrasenna');");
-        CerrarBaseDatos($instancia);
-        
-        return $usuario;
-    }
+function ValidarIngresoModel($correo, $contrasenna)
+{
+    $instancia = AbrirBaseDatos();
+    $usuario = $instancia->query("CALL ValidarLogin('$correo', '$contrasenna');");
+    CerrarBaseDatos($instancia);
+
+    return $usuario;
+}
 
 ?>

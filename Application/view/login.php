@@ -1,4 +1,4 @@
-<?php include "componentes.php"; ?>
+<?php include_once "../Controller/LoginController.php"; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -43,15 +43,23 @@
                         <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
                             aria-labelledby="pills-home-tab">
 
-                            <div class="form px-4 pt-5">
+                            <form action="" method="POST">
 
-                                <input type="text" name="" class="form-control" placeholder="Correo">
+                                <div class="form px-4 pt-5">
 
-                                <input type="text" name="" class="form-control" placeholder="Contraseña">
-                                <button class="btn btn-dark btn-block">Entrar</button>
-                                <label id="lblForgotPswd"><br>¿Has olvidado tu contraseña?</label>
+                                    <input type="text" name="txtCorreo" class="form-control" placeholder="Correo">
 
-                            </div>
+                                    <input type="password" name="txtContrasenna" class="form-control"
+                                        placeholder="Contraseña">
+
+                                    <button type="submit" id="btnLogin" name="btnLogin"
+                                        class="btn btn-dark btn-block">Entrar</button>
+
+                                    <label id="lblForgotPswd"><br>¿Has olvidado tu contraseña?</label>
+
+                                </div>
+
+                            </form>
 
                         </div>
                         <div class="tab-pane fade" id="pills-profile" role="tabpanel"
@@ -60,15 +68,16 @@
 
                             <div class="form px-4">
 
-                                <input type="text" name="" class="form-control" placeholder="Nombre">
+                                <input type="text" name="txtNombre" class="form-control" placeholder="Nombre">
 
-                                <input type="text" name="" class="form-control" placeholder="Apellido">
+                                <input type="text" name="txtApellido" class="form-control" placeholder="Apellido">
 
-                                <input type="text" name="" class="form-control" placeholder="Correo">
+                                <input type="text" name="txtCorreoReg" class="form-control" placeholder="Correo">
 
-                                <input type="text" name="" class="form-control" placeholder="Contraseña">
+                                <input type="password" id="txtContrasennaReg" name="txtContrasennaReg"
+                                    class="form-control" placeholder="Contraseña">
 
-                                <button class="btn btn-dark btn-block">Registrarse</button>
+                                <button type="submit" class="btn btn-dark btn-block">Registrarse</button>
 
                             </div>
 
@@ -91,7 +100,7 @@
 
     <script src="../vendor/jquery/jquery.min.js"></script>
     <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/simple-sidebar.js"></script>
+    <script src="../js/login.js"></script>
 
 
 </body>
