@@ -31,7 +31,7 @@
 
       <div class="container-fluid" >
 
-        <h1 style="color:white;">Aqui va el cronometro</h1>
+        <p style="color:white;">--Aqui va el cronometro--</p>
 
 
 
