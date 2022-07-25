@@ -1,6 +1,6 @@
 <?php
 
-include "Conexion.php";
+include_once "Conexion.php";
 
 function ValidarIngresoModel($correo, $contrasenna)
 {
