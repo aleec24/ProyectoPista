@@ -45,7 +45,7 @@
 
                             <div class="form px-4 pt-5">
 
-                                <input type="text" name="" class="form-control" placeholder="Usuario">
+                                <input type="text" name="" class="form-control" placeholder="Correo">
 
                                 <input type="text" name="" class="form-control" placeholder="Contraseña">
                                 <button class="btn btn-dark btn-block">Entrar</button>
@@ -60,9 +60,11 @@
 
                             <div class="form px-4">
 
-                                <input type="text" name="" class="form-control" placeholder="Nombre Completo">
+                                <input type="text" name="" class="form-control" placeholder="Nombre">
 
-                                <input type="text" name="" class="form-control" placeholder="Usuario">
+                                <input type="text" name="" class="form-control" placeholder="Apellido">
+
+                                <input type="text" name="" class="form-control" placeholder="Correo">
 
                                 <input type="text" name="" class="form-control" placeholder="Contraseña">
 
