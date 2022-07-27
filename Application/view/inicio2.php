@@ -33,7 +33,7 @@
 
               <div class="row">
 
-                  <div class="col-1">
+                  <div class="col-2">
 
                   </div>
 
@@ -45,9 +45,6 @@
 
                   </div>
 
-                  <div class="col-1">
-
-                  </div>
 
                   <div class="col-4">
 
@@ -59,18 +56,21 @@
                               00:00:00
                           </div>
 
+                          <div class="laps">
+                                Mejor Vuelta:01:43
+                                Vueltas 30/72
+                          </div>
+
                           <br>
 
                       </div>
                   </div>
 
-                  <div class="col-1">
-
-                  </div>
-
-                  <div class="col-2">
+                  
+                  <div class="col-3">
 
                       <div class="controls">
+                        
                           <button id="stop"><i class="fa-solid fa-pause"></i></i></button>
                           <button id="start"><i class="fa-solid fa-play"></i></button>
 
