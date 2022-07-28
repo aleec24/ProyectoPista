@@ -15,7 +15,7 @@ if (isset($_POST["btnLogin"])) {
         $_SESSION["NombreUsuario"] = $item["Nombre"];
         $_SESSION["RolUsuario"] = $item["rolID"];
 
-        header("Location: inicio2.php");
+        header("Location: inicio.php");
     }
 
 }

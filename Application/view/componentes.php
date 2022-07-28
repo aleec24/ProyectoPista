@@ -11,7 +11,7 @@ function MostrarHeader()
   </div>
   
   <div class= "icon-bar">
-    <a href="inicio2.php"><i class="fa-solid fa-house"> </i>
+    <a href="inicio.php"><i class="fa-solid fa-house"> </i>
       <div class="menu-items">
         Home
   </div>
