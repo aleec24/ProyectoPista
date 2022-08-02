@@ -74,17 +74,20 @@ include_once '../Controller/RegistroController.php';
                                 <div class="form px-4">
 
                                     <input type="text" name="txtNombre" class="form-control" placeholder="Nombre"
-                                        title="Nombre sin espacios." required>
+                                        pattern="[A-Za-z]{3,20}"
+                                        title="Por favor introduzca solo caracteres del alfabeto." required>
 
                                     <input type="text" name="txtApellido" inputmode="text" class="form-control"
-                                        placeholder="Apellido" title="Primer apellido sin espacios." required>
+                                        placeholder="Apellido" pattern="[A-Za-z]{3,20}"
+                                        title="Por favor introduzca solo caracteres del alfabeto." required>
 
                                     <input type="email" name="txtCorreoReg" class="form-control" placeholder="Correo"
-                                        title="Formato: nombre@correo.com" required>
+                                        required>
 
                                     <input type="password" id="txtContrasennaReg" name="txtContrasennaReg"
-                                        class="form-control" placeholder="Contraseña" minlength="8" maxlength="16"
-                                        title="Debe contener al menos 8 caracteres, un caracter especial y un número."
+                                        class="form-control" placeholder="Contraseña" minlength="8" maxlength="20"
+                                        pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])\S{8,20}"
+                                        title="Debe contener al menos 8 caracteres, una mayúscula, un caracter especial y un número."
                                         required>
 
                                     <button type="submit" id="btnRegistro" name="btnRegistro"
