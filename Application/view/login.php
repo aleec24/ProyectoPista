@@ -34,11 +34,11 @@ include_once '../Controller/RegistroController.php';
                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                         <li class="nav-item text-center">
                             <a class="nav-link active btl" id="pills-home-tab" data-toggle="pill" href="#pills-home"
-                                role="tab" aria-controls="pills-home" aria-selected="true">Iniciar Sesion</a>
+                                role="tab" aria-controls="pills-home" aria-selected="true">Iniciar Sesión</a>
                         </li>
                         <li class="nav-item text-center">
                             <a class="nav-link btr" id="pills-profile-tab" data-toggle="pill" href="#pills-profile"
-                                role="tab" aria-controls="pills-profile" aria-selected="false">Registrate!</a>
+                                role="tab" aria-controls="pills-profile" aria-selected="false">Regístrate!</a>
                         </li>
 
                     </ul>
@@ -50,11 +50,11 @@ include_once '../Controller/RegistroController.php';
 
                                 <div class="form px-4 pt-5">
 
-                                    <input type="text" name="txtCorreo" class="form-control" placeholder="Correo"
-                                        title="Correo Registrado.">
+                                    <input type="email" name="txtCorreo" class="form-control" placeholder="Correo"
+                                        title="Correo Registrado." required>
 
                                     <input type="password" name="txtContrasenna" class="form-control"
-                                        placeholder="Contraseña" title="Contraseña del Usuario.">
+                                        placeholder="Contraseña" title="Contraseña del Usuario." required>
 
                                     <button type="submit" id="btnLogin" name="btnLogin"
                                         class="btn btn-dark btn-block">Entrar</button>
@@ -74,17 +74,18 @@ include_once '../Controller/RegistroController.php';
                                 <div class="form px-4">
 
                                     <input type="text" name="txtNombre" class="form-control" placeholder="Nombre"
-                                        title="Nombre sin espacios.">
+                                        title="Nombre sin espacios." required>
 
-                                    <input type="text" name="txtApellido" class="form-control" placeholder="Apellido"
-                                        title="Primer apellido sin espacios.">
+                                    <input type="text" name="txtApellido" inputmode="text" class="form-control"
+                                        placeholder="Apellido" title="Primer apellido sin espacios." required>
 
-                                    <input type="text" name="txtCorreoReg" class="form-control" placeholder="Correo"
-                                        title="Formato: nombre@correo.com">
+                                    <input type="email" name="txtCorreoReg" class="form-control" placeholder="Correo"
+                                        title="Formato: nombre@correo.com" required>
 
                                     <input type="password" id="txtContrasennaReg" name="txtContrasennaReg"
-                                        class="form-control" placeholder="Contraseña"
-                                        title="Debe contener al menos 8 caracteres, un caracter especial y un número.">
+                                        class="form-control" placeholder="Contraseña" minlength="8" maxlength="16"
+                                        title="Debe contener al menos 8 caracteres, un caracter especial y un número."
+                                        required>
 
                                     <button type="submit" id="btnRegistro" name="btnRegistro"
                                         class="btn btn-dark btn-block">Registrarse</button>
