@@ -8,7 +8,7 @@ if (isset($_POST["btnRegistro"])) {
     $Contrasenna = $_POST["txtContrasennaReg"];
     $Nombre = $_POST["txtNombre"];
     $Apellido = $_POST["txtApellido"];
-    $Edad = rand(18, 70);
+    $Edad = rand(18, 35);
     $Rol = 2;
 
     RegistrarUsuariosModel($correo, $Contrasenna, $Nombre, $Apellido, $Edad, $Rol);
