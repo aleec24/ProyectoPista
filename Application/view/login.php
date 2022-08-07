@@ -63,7 +63,9 @@ include_once '../Controller/RegistroController.php';
                                     <button type="submit" id="btnLogin" name="btnLogin"
                                         class="btn btn-dark btn-block">Entrar</button>
 
-                                    <label id="lblForgotPswd"><br>¿Has olvidado tu contraseña?</label>
+                                    <a id="ForgotPswd" name="ForgotPswd" onclick="OlvidoClave()"><br>
+                                        ¿Has olvidado tu contraseña?
+                                    </a>
 
                                 </div>
 
@@ -117,6 +119,7 @@ include_once '../Controller/RegistroController.php';
 
     <script src="../vendor/jquery/jquery.min.js"></script>
     <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/forgotPassword.js"></script>
 
 </body>
 
