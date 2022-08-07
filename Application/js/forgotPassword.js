@@ -5,7 +5,7 @@ function OlvidoClave() {
     confirmButtonColor: "#AF0404",
     cancelButtonColor: "#414141",
     title: "Digite su email",
-    input: "text",
+    input: "email",
     inputAttributes: {
       autocapitalize: "off",
     },
