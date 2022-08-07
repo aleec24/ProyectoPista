@@ -12,7 +12,23 @@ if (isset($_POST["btnRegistro"])) {
     $Rol = 2;
 
     RegistrarUsuariosModel($correo, $Contrasenna, $Nombre, $Apellido, $Edad, $Rol);
-    echo "<script type='text/javascript'>alert('El registro fue exitoso! Por favor ingrese sus nuevas credenciales.');</script>";
+
+    echo '
+    <script type="module">
+
+    Swal.fire({
+        position: "center",
+        icon: "success",
+        iconColor:"#fff",
+        title: "¡Registro satisfactorio! Por favor ingrese sus nuevas credenciales.",
+        showConfirmButton: false,
+        timer: 2000,
+        color: "#fff",
+        background:"#252525"
+      })
+
+    </script>';
+
 }
 
 ?>
