@@ -157,6 +157,28 @@ VALUES(pCorreo, pContrasenna, pNombre, pApellido, pEdad, pRol);
 END$$
 DELIMITER ;
 
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ValidarUsuario`(IN `pCorreo` VARCHAR(25))
+BEGIN
+
+	SELECT	usuarioID, Correo, Nombre
+    FROM 	usuario U
+    WHERE 	U.correo = pCorreo;
+
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ActualizarContrasenna`(IN `pCorreo` VARCHAR(25), IN `pContrasenna` VARCHAR(25))
+BEGIN
+
+	UPDATE	usuario U
+    SET u.contrasena = pContrasenna
+    WHERE 	U.correo = pCorreo;
+
+END$$
+DELIMITER ;
+
 
 
 
