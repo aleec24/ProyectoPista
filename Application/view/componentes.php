@@ -25,13 +25,13 @@ function MostrarHeader()
                         </div>
                     </a>
                 </li>
-                    <li class="fa-solid fa-flag-checkered"><a href="#">
+                    <li class="fa-solid fa-flag-checkered"><a href="Carreras.php">
                     <div class="menu-items">
                         Carreras
                         </div>
                     </a>
                 </li>
-                    <li class="fa-solid fa-road"><a href="#">
+                    <li class="fa-solid fa-road"><a href="Pistas.php">
                     <div class="menu-items">
                         Pistas
                         </div>
@@ -43,7 +43,7 @@ function MostrarHeader()
                         </div>
                     </a>   
                 </li>
-                    <li class="fa-solid fa-user"><a href="#">
+                    <li class="fa-solid fa-user"><a href="Cuenta.php">
                     <div class="menu-items">
                         Mi cuenta
                         </div>
@@ -58,13 +58,13 @@ function MostrarHeader()
         <div class="overlay">
             <a class="close">&times;</a>
             <div class="overlay__content">
-                <a href="#">Home</a>
-                <a href="#">Usuarios</a>
-                <a href="#">Pilotos</a>
-                <a href="#">Carreras</a>
-                <a href="#">Pistas</a>
-                <a href="#">Vehiculos</a>
-                <a href="#">Mi cuenta</a>
+                <a href="inicio.php">Home</a>
+                <a href="Usuarios.php">Usuarios</a>
+                <a href="Pilotos.php">Pilotos</a>
+                <a href="Carreras.php">Carreras</a>
+                <a href="Pistas.php">Pistas</a>
+                <a href="Vehiculos.php">Vehiculos</a>
+                <a href="Cuenta.php">Mi cuenta</a>
             </div>
         </div>
   ';
