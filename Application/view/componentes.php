@@ -3,63 +3,70 @@
 function MostrarHeader()
 {
   echo '
-  <nav class="navbar navbar-expand-lg">
-
-  <div class="navbar">
-  <div class= "logo">
-  <h1> LOGO </h1>
-  </div>
-  
-  <div class= "icon-bar">
-    <a href="inicio.php"><i class="fa-solid fa-house"> </i>
-      <div class="menu-items">
-        Home
-  </div>
-  </a>
-  <a href="Usuarios.php"><i class="fa-solid fa-users"></i>
-      <div class="menu-items">
-        Usuarios
-  </div>
-   
-  </a>
-  <a href="Pilotos.php"><i class="fa-solid fa-people-group"> </i>
-      <div class="menu-items">
-        Pilotos
-  </div>
-  
-  </a>
-  <a href="#"><i class="fa-solid fa-flag-checkered"></i>
-      <div class="menu-items">
-        Carreras
-  </div>
-   
-  </a>
-  <a href="#"><i class="fa-solid fa-road"></i> </i>
-      <div class="menu-items">
-        Pistas
-  </div>
-   
-  </a>
-  <a href="Vehiculos.php"><i class="fa-solid fa-car-rear"> </i>
-      <div class="menu-items">
-        Vehiculos
-  </div>
-   
-  </a>
-  <a href="#"><i class="fa-solid fa-user"></i>
-      <div class="menu-items">
-        Mi cuenta
-  </div>
-   
-  </a>
-  <a href="#"><i class="fa-solid fa-right-from-bracket"></i>
-      <div class="menu-items">
-      
-  </div>
-   
-  </a>
-  </div>
-  </nav>
+  <header>
+            <a class="logo" href="/"><label class="logox">Racing</label></a>
+            <nav>
+                <ul class="nav__links">
+                    <li class="fa-solid fa-house"><a href="inicio.php">
+                    <div class="menu-items">
+                        Home
+                      </div>
+                    </a>
+                </li>
+                    <li class="fa-solid fa-users"><a href="Usuarios.php">
+                    <div class="menu-items">
+                        Usuarios
+                        </div>
+                    </a>
+                </li>
+                    <li class="fa-solid fa-people-group"><a href="Pilotos.php">
+                    <div class="menu-items">
+                        Pilotos
+                        </div>
+                    </a>
+                </li>
+                    <li class="fa-solid fa-flag-checkered"><a href="#">
+                    <div class="menu-items">
+                        Carreras
+                        </div>
+                    </a>
+                </li>
+                    <li class="fa-solid fa-road"><a href="#">
+                    <div class="menu-items">
+                        Pistas
+                        </div>
+                    </a>
+                </li>
+                    <li class="fa-solid fa-car-rear"><a href="#">
+                    <div class="menu-items">
+                        Vehiculos
+                        </div>
+                    </a>   
+                </li>
+                    <li class="fa-solid fa-user"><a href="#">
+                    <div class="menu-items">
+                        Mi cuenta
+                        </div>
+                    </a>
+                    
+                </li>
+                </ul>
+            </nav>
+            <a class="cta" href="#">Log out</a>
+            <p class="menu cta">Menu</p>
+        </header>
+        <div class="overlay">
+            <a class="close">&times;</a>
+            <div class="overlay__content">
+                <a href="#">Home</a>
+                <a href="#">Usuarios</a>
+                <a href="#">Pilotos</a>
+                <a href="#">Carreras</a>
+                <a href="#">Pistas</a>
+                <a href="#">Vehiculos</a>
+                <a href="#">Mi cuenta</a>
+            </div>
+        </div>
   ';
 }
 

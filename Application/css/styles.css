@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    background-image: url(../img/carretera.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+        
+    }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 2%;
+    background-color: grey;
+    height: 100px;
+    padding-bottom: 0;
+    
+  }
+  
+  .logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    font-weight: bold;
+    font-family: montserrat !important; 
+  }
+  label.logox{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    font-weight: bold;
+    margin-bottom: 35px;
+    
+  }
+  @media (max-width: 952px){
+    label.logox{
+      font-size: 30px;
+      padding-left: 50px;
+    }
+  }
+  
+  
+  .nav__links a,
+  .cta,
+  .overlay__content a {
+    font-family: 'SF display' !important;
+    font-weight: 500;
+    color: #edf0f1;
+    text-decoration: none;
+  }
+  
+  .nav__links {
+    list-style: none;
+    display: flex;
+
+
+    
+  }
+  
+  .nav__links li {
+    padding: 0px 20px;
+
+
+  }
+  
+  .nav__links li a {
+    transition: color 0.3s ease 0s;
+
+  }
+  
+  .nav__links li a:hover {
+    color: #a92700d2;
+
+  }
+  
+  .cta {
+    padding: 9px 25px;
+    background-color: rgb(169, 37, 0);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
+    text-decoration: none;
+  }
+  
+  .cta:hover {
+    background-color: rgba(169, 0, 0, 0.655);
+  }
+  
+  /* Mobile Nav */
+  
+  .menu {
+    display: none;
+
+  }
+  
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #24252a;
+    overflow-x: hidden;
+    transition: width 0.5s ease 0s;
+  }
+  
+  .overlay--active {
+    width: 100%;
+  }
+  
+  .overlay__content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overlay a {
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: color 0.3s ease 0s;
+  }
+  
+  .overlay a:hover,
+  .overlay a:focus {
+    color: red;
+  }
+  .overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: #edf0f1;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {
+      font-size: 20px;
+    }
+    .overlay .close {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .nav__links,
+    .cta {
+      display: none;
+    }
+    .menu {
+      display: initial;
+    }
+  }
+
+
+.menu-items{
+    font-size: large;
+    padding-top: 5px;
+    font-family: 'SF display' !important;
+    text-align:center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.fa-house{
+    color:white;
+    text-align:center;
+    align-items: center;
+    justify-content: center;
+
+
+}
+.fa-users{
+    color:white;
+    text-align:center;
+    align-items: center;
+    justify-content: center;
+
+}
+.fa-people-group{
+    color:white;
+    text-align:center;
+    align-items: center;
+    justify-content: center;
+
+}
+.fa-flag-checkered{
+    color:white;
+    text-align:center;
+    align-items: center;
+    justify-content: center;
+}
+.fa-road{
+    color:white;
+    text-align:center;
+    align-items: center;
+    justify-content: center;
+
+}
+.fa-car-rear{
+    color:white;
+    text-align:center;
+    align-items: center;
+    justify-content: center;
+
+}
+.fa-user{
+    color:white;
+    text-align:center;
+    align-items: center;
+    justify-content: center;
+}
+.fa-right-from-bracket{
+    color: white;
+   padding-left: 90px;
+   text-align:center;
+   align-items: center;
+   justify-content: center;
+   
+}
+
+

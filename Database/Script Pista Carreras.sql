@@ -1,6 +1,4 @@
-/*drop database PistaCarreras*/
 
-create database PistaCarreras;
 
 use PistaCarreras;
 
