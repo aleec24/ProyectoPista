@@ -21,8 +21,8 @@
     
 <div class="container-fluid text-center"  style="background: black">
         <div class="row m-0">
-            <div class="col align-self-center emergencias">INFORMACION</div>
-            <div class="col align-self-center numero"><a href="https://wa.me/50683910129" target="_blank">Contactanos: +506 8391-0129</a></div>
+            <div class="col align-self-center emergencias">INFORMACIÓN</div>
+            <div class="col align-self-center numero"><a href="https://wa.me/50683910129" target="_blank">Contactános: +506 8391-0129</a></div>
         </div>
     </div>
 

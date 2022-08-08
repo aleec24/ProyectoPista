@@ -14,6 +14,7 @@ include_once '../Controller/RegistroController.php';
     <meta name="author" content="">
 
     <title>Inicio de Sesión</title>
+    <link rel="icon" href="../img/logo.png">
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/simple-sidebar.css" rel="stylesheet">
     <link href="../css/login-container.css" rel="stylesheet">

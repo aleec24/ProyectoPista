@@ -13,8 +13,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Inicio</title>
+    <title>Usuarios</title>
+    <link rel="icon" href="../img/logo.png">
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/tablas.css" rel="stylesheet">
     <link href="../css/styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/b297c62494.js" crossorigin="anonymous"></script>
@@ -29,8 +31,10 @@
     <div id="page-content-wrapper">
 
 
-
-        <div class="container-fluid">
+        
+             <br>
+             <br>
+        <div class=tablas>
 
             <table id="tUsuarios" class="table table-dark">
                 <thead>

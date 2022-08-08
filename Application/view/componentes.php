@@ -4,7 +4,7 @@ function MostrarHeader()
 {
   echo '
   <header>
-            <a class="logo" href="/"><label class="logox">Racing</label></a>
+            <a class="logo" href="inicio.php"><label class="logox">Racing</label></a>
             <nav>
                 <ul class="nav__links">
                     <li class="fa-solid fa-house"><a href="inicio.php">
@@ -37,7 +37,7 @@ function MostrarHeader()
                         </div>
                     </a>
                 </li>
-                    <li class="fa-solid fa-car-rear"><a href="#">
+                    <li class="fa-solid fa-car-rear"><a href="Vehiculos.php">
                     <div class="menu-items">
                         Vehiculos
                         </div>
@@ -52,7 +52,7 @@ function MostrarHeader()
                 </li>
                 </ul>
             </nav>
-            <a class="cta" href="#">Log out</a>
+            <a class="cta" href="login.php">Log out</a>
             <p class="menu cta">Menu</p>
         </header>
         <div class="overlay">

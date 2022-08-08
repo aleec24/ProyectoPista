@@ -87,6 +87,7 @@
     cursor: pointer;
     transition: background-color 0.3s ease 0s;
     text-decoration: none;
+    margin-bottom: 30px
   }
   
   .cta:hover {
