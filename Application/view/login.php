@@ -18,6 +18,10 @@ include_once '../Controller/RegistroController.php';
     <link href="../css/simple-sidebar.css" rel="stylesheet">
     <link href="../css/login-container.css" rel="stylesheet">
 
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.26/sweetalert2.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.26/sweetalert2.min.js"></script>
+
 </head>
 
 <body>
@@ -38,7 +42,7 @@ include_once '../Controller/RegistroController.php';
                         </li>
                         <li class="nav-item text-center">
                             <a class="nav-link btr" id="pills-profile-tab" data-toggle="pill" href="#pills-profile"
-                                role="tab" aria-controls="pills-profile" aria-selected="false">Regístrate!</a>
+                                role="tab" aria-controls="pills-profile" aria-selected="false">¡Regístrate!</a>
                         </li>
 
                     </ul>
@@ -59,7 +63,9 @@ include_once '../Controller/RegistroController.php';
                                     <button type="submit" id="btnLogin" name="btnLogin"
                                         class="btn btn-dark btn-block">Entrar</button>
 
-                                    <label id="lblForgotPswd"><br>¿Has olvidado tu contraseña?</label>
+                                    <a id="ForgotPswd" name="ForgotPswd" onclick="OlvidoClave()"><br>
+                                        ¿Has olvidado tu contraseña?
+                                    </a>
 
                                 </div>
 
@@ -113,8 +119,7 @@ include_once '../Controller/RegistroController.php';
 
     <script src="../vendor/jquery/jquery.min.js"></script>
     <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/login.js"></script>
-
+    <script src="../js/forgotPassword.js"></script>
 
 </body>
 

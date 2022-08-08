@@ -1,6 +1,6 @@
 <?php
 
-include "../Model/UsuariosModel.php";
+include "../Model/RegistroModel.php";
 
 if (isset($_POST["btnRegistro"])) {
 
@@ -8,11 +8,27 @@ if (isset($_POST["btnRegistro"])) {
     $Contrasenna = $_POST["txtContrasennaReg"];
     $Nombre = $_POST["txtNombre"];
     $Apellido = $_POST["txtApellido"];
-    $Edad = rand(18, 70);
+    $Edad = rand(18, 35);
     $Rol = 2;
 
     RegistrarUsuariosModel($correo, $Contrasenna, $Nombre, $Apellido, $Edad, $Rol);
-    echo "<script type='text/javascript'>alert('El registro fue exitoso! Por favor ingrese sus nuevas credenciales.');</script>";
+
+    echo '
+    <script type="module">
+
+    Swal.fire({
+        position: "center",
+        icon: "success",
+        iconColor:"#fff",
+        title: "¡Registro satisfactorio! Por favor ingrese sus nuevas credenciales.",
+        showConfirmButton: false,
+        timer: 2000,
+        color: "#fff",
+        background:"#252525"
+      })
+
+    </script>';
+
 }
 
 ?>

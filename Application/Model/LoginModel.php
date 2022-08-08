@@ -11,4 +11,22 @@ function ValidarIngresoModel($correo, $contrasenna)
     return $usuario;
 }
 
+function ValidarUsuarioModel($correo)
+{
+    $instancia = AbrirBaseDatos();
+    $usuario = $instancia->query("CALL ValidarUsuario('$correo');");
+    CerrarBaseDatos($instancia);
+
+    return $usuario;
+}
+
+function ActualizarContrasennaModel($correo, $contrasenna)
+{
+    $instancia = AbrirBaseDatos();
+    $usuario = $instancia->query("CALL ActualizarContrasenna('$correo','$contrasenna');");
+    CerrarBaseDatos($instancia);
+
+    return $usuario;
+}
+
 ?>

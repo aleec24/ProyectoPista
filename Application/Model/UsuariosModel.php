@@ -10,12 +10,3 @@ function ConsultarUsuariosModel()
 
     return $listaUsuarios;
 }
-
-function RegistrarUsuariosModel($Correo, $Contrasenna, $Nombre, $Apellido, $Edad, $Rol)
-{
-    $instancia = AbrirBaseDatos();
-    $instancia->query("CALL RegistroUsuario('$Correo', '$Contrasenna', '$Nombre', '$Apellido','$Edad', $Rol);");
-    CerrarBaseDatos($instancia);
-}
-
-?>
