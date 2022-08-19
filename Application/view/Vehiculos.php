@@ -1,5 +1,5 @@
 <?php include "componentes.php"; ?>
-<?php include "../Controller/VehiculosController.php"; ?>
+<?php include "../Controller/UsuariosController.php"; ?>
 
 <!DOCTYPE html>
 <html lang="en">

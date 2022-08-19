@@ -1,5 +1,5 @@
 <?php include "componentes.php"; ?>
-<?php include "../Controller/PilotosController.php"; ?>
+<?php include "../Controller/UsuariosController.php"; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -38,13 +38,16 @@
             <table id="tUsuarios" class="table table-dark">
                 <thead>
                     <tr>
-                        <th scope="col">ID Piloto</th>
+                        <th scope="col">ID del Piloto</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Edad</th>
                         <th scope="col">Puntos</th>
                         <th scope="col">Victorias</th>
                         <th scope="col">Podios</th>
-                        <th scope="col">ID Usuario</th>
                     </tr>
                 </thead>
+               
                 <tbody>
                     <?php ConsultarPilotos(); ?>
                 </tbody>

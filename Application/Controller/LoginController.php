@@ -1,7 +1,7 @@
 <?php
 
 include '../Model/LoginModel.php';
-include_once '../view/componentes.php';
+
 
 if (isset($_POST["btnLogin"])) {
     $correo = $_POST["txtCorreo"];
@@ -57,6 +57,9 @@ function randomPassword($n)
     }
     return $randomString;
 }
+
+
+
 
 
 ?>
