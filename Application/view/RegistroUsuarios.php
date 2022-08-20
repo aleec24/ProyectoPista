@@ -1,9 +1,6 @@
 <?php include "componentes.php"; ?>
 <?php include "../Controller/UsuariosController.php";
 
-$ID = $_GET["q"];
-$Usuario = ConsultarUsuario($ID);
-
 ?>
 
 <!DOCTYPE html>
@@ -45,17 +42,18 @@ $Usuario = ConsultarUsuario($ID);
 
                 <div class="col-1">
                 </div>
-                <div class="col-3" style="color:white">
-                    ID Usuario
-                    <input type="text" name="txtUsuarioID" class="form-control" Value="<?php echo $Usuario["usuarioID"]; ?>" required readonly="true">
-                </div>
+
                 <div class="col-3" style="color:white">
                     Correo
-                    <input type="text" name="txtCorreo" class="form-control" Value="<?php echo $Usuario["correo"]; ?>" required>
+                    <input type="text" name="txtCorreo" class="form-control" Value="" required>
                 </div>
                 <div class="col-3" style="color:white">
                     Contraseña
-                    <input type="text" name="txtContrasenna" class="form-control" Value="<?php echo $Usuario["contrasena"]; ?>" required>
+                    <input type="text" name="txtContrasenna" class="form-control" Value="" required>
+                </div>
+                <div class="col-3" style="color:white">
+                    Nombre
+                    <input type="text" name="txtNombre" class="form-control" Value="" required>
                 </div>
 
 
@@ -67,26 +65,16 @@ $Usuario = ConsultarUsuario($ID);
 
                 <div class="col-1">
                 </div>
-                <div class="col-3" style="color:white">
-                    Nombre
-                    <input type="text" name="txtNombre" class="form-control" Value="<?php echo $Usuario["nombre"]; ?>" required>
-                </div>
+
 
                 <div class="col-3" style="color:white">
                     Apellido
-                    <input type="text" name="txtApellido" class="form-control" Value="<?php echo $Usuario["apellido"]; ?>" required>
+                    <input type="text" name="txtApellido" class="form-control" Value="" required>
                 </div>
 
                 <div class="col-3" style="color:white">
                     Edad
-                    <input type="text" name="txtEdad" class="form-control" Value="<?php echo $Usuario["edad"]; ?>" required>
-                </div>
-
-            </div>
-
-            <div class="row">
-
-                <div class="col-1">
+                    <input type="text" name="txtEdad" class="form-control" Value="" required>
                 </div>
                 <div class="col-3" style="color:white">
                     <label>Rol</label>
@@ -96,11 +84,17 @@ $Usuario = ConsultarUsuario($ID);
                         ?>
                     </select>
                 </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-1">
+                </div>
                 <div class="col-3">
                     <br />
-                    <input type="submit" name="btnActualizar" Value="Actualizar" class="btn btn-info">
+                    <input type="submit" name="btnRegistrar" Value="Registrar" class="btn btn-info">
                 </div>
-                
 
             </div>
 

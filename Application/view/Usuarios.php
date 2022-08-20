@@ -1,4 +1,3 @@
-
 <?php include "componentes.php"; ?>
 <?php include "../Controller/UsuariosController.php"; ?>
 
@@ -28,12 +27,12 @@
     <?php MostrarHeader(); ?>
     <br>
 
-    <div id="page-content-wrapper">
+    <div id="page-content-wrapper" class="container-fluid">
 
 
-        
-             <br>
-             <br>
+
+        <br>
+        <br>
         <div class=tablas>
 
             <table id="tUsuarios" class="table table-dark">
@@ -48,11 +47,13 @@
                         <th scope="col">Acciones</th>
                     </tr>
                 </thead>
+
                 <tbody>
                     <?php ConsultarUsuarios(); ?>
                 </tbody>
             </table>
-            
+            <a href="RegistroUsuarios.php" class="btn btn-info">Crear Usuario</a>
+
 
         </div>
 

@@ -38,7 +38,7 @@
             <table id="tUsuarios" class="table table-dark">
                 <thead>
                     <tr>
-                        <th scope="col">ID del Piloto</th>
+                        
                         <th scope="col">Nombre</th>
                         <th scope="col">Apellido</th>
                         <th scope="col">Edad</th>

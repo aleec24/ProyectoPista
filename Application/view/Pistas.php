@@ -38,7 +38,7 @@
             <table id="tUsuarios" class="table table-dark">
                 <thead>
                     <tr>
-                        <th scope="col">ID de Pista</th>
+                        
                         <th scope="col">Nombre de la Pista</th>
                         <th scope="col">Cantidad de Pilotos</th>
                         <th scope="col">Mejor Vuelta</th>

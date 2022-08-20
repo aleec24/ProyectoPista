@@ -42,7 +42,6 @@ function ConsultarVehiculos()
         while($item = mysqli_fetch_array($listaPilotos))
         {   
             echo "<tr>";
-            echo "<td>" . $item["usuarioID"] . "</td>";
             echo "<td>" . $item["nombre"] . "</td>";
             echo "<td>" . $item["apellido"] . "</td>";
             echo "<td>" . $item["edad"] . "</td>";
@@ -60,7 +59,6 @@ function ConsultarVehiculos()
         while($item = mysqli_fetch_array($listaVehiculos))
         {   
             echo "<tr>";
-            echo "<td>" . $item["pistaID"] . "</td>";
             echo "<td>" . $item["nombrePista"] . "</td>"; 
             echo "<td>" . $item["cantidadPilotos"] . "</td>";
             echo "<td>" . $item["recordVuelta"] . "</td>";
@@ -99,6 +97,25 @@ function ConsultarVehiculos()
             echo "<option value=". $item["rolID"] .">" . $item["descripcionRol"] . "</option>";
         }
     }  
+
+    if(isset($_POST['btnRegistrar']))
+    {
+        $correo = $_POST["txtCorreo"]; 
+        $contrasena = $_POST["txtContrasenna"]; 
+        $nombre = $_POST["txtNombre"];
+        $apellido = $_POST["txtApellido"];
+        $edad = $_POST["txtEdad"];
+        $rolID = $_POST["txtRol"];
+        
+        RegistrarUsuariosModel($correo, $contrasena, $nombre, $apellido, $edad, $rolID);
+        header("Location: ../View/Usuarios.php");
+    }
+
+    if(isset($_POST['EliminarAjax']))
+    {
+        $usuarioID = $_POST['usuarioID'];
+        EliminarUsuariosModel($usuarioID);
+    }
 
 
     

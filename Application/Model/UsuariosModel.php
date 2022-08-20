@@ -45,10 +45,10 @@ function ConsultarPilotosModel()
         CerrarBaseDatos($instancia);
     }
 
-    function ConsultarUsuarioModel($Cedula)
+    function ConsultarUsuarioModel($usuarioID)
     {    
         $instancia = AbrirBaseDatos();
-        $Usuario = $instancia -> query("CALL ConsultarUsuario('$Cedula');");
+        $Usuario = $instancia -> query("CALL ConsultarUsuario('$usuarioID');");
         CerrarBaseDatos($instancia);
         return $Usuario;
     }
@@ -59,4 +59,18 @@ function ConsultarPilotosModel()
         $listaRoles = $instancia -> query("CALL ConsultarRoles();");
         CerrarBaseDatos($instancia);
         return $listaRoles;
+    }
+
+    function RegistrarUsuariosModel($correo, $contrasena, $nombre, $apellido, $edad, $rolID)
+    {    
+        $instancia = AbrirBaseDatos();
+        $instancia -> query("CALL RegistrarUsuarios('$correo', '$contrasena', '$nombre', '$apellido', $edad, $rolID);");
+        CerrarBaseDatos($instancia);
+    }
+
+    function EliminarUsuariosModel($usuarioID)
+    {    
+        $instancia = AbrirBaseDatos();
+        $instancia -> query("CALL EliminarUsuario('$usuarioID');");
+        CerrarBaseDatos($instancia);
     }
