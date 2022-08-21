@@ -145,6 +145,9 @@ values("Circuito de Barcelona-Catalunya",20,"00:1:18.149","4.675"),
 insert into Carrera(fecha,hora,cantidadVueltas,pistaID)
 values("2022-06-06","00:10:00.000",73,1);
 
+insert into detalleCarerraPilotos(carreraID,posicionPiloto,pilotoID,vehiculoID)
+values(1,1,1,2);
+
 DELIMITER $$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `ConsultarUsuarios`()
@@ -296,3 +299,4 @@ BEGIN
 
 END$$
 DELIMITER ;
+

@@ -74,3 +74,12 @@ function ConsultarPilotosModel()
         $instancia -> query("CALL EliminarUsuario('$usuarioID');");
         CerrarBaseDatos($instancia);
     }
+
+    function ConsultarInfoCarreraModel()
+{
+    $instancia = AbrirBaseDatos();
+    $listaInfoCarrera = $instancia->query("CALL ConsultarInfoCarrera();");
+    CerrarBaseDatos($instancia);
+
+    return $listaInfoCarrera;
+}

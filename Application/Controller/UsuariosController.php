@@ -117,6 +117,20 @@ function ConsultarVehiculos()
         EliminarUsuariosModel($usuarioID);
     }
 
+    function ConsultarInfoCarrera()
+    {       
+        $listaInfoCarrera = ConsultarInfoCarreraModel();
+        while($item = mysqli_fetch_array($listaInfoCarrera))
+        {   
+            echo "<tr>";
+            echo "<td>" . $item["posicionPiloto"] . "</td>";
+            echo "<td>" . $item["nombre"] . "</td>";
+            echo "<td>" . $item["modelo"] . "</td>";  
+            echo "</tr>";
+        } 
+
+    }
+
 
     
 ?>
