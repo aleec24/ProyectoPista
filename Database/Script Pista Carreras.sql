@@ -71,7 +71,7 @@ create table Carrera(
 
 /*Se linkea un piloto, con una carrera en especifico y se brinda toda la informacion de ese dia*/
 
-create table detalleCarerraPilotos(
+create table detalleCarreraPilotos(
 	carreraID int NOT NULL,
     posicionPiloto int NOT NULL,
     pilotoID int NOT NULL,
@@ -145,8 +145,12 @@ values("Circuito de Barcelona-Catalunya",20,"00:1:18.149","4.675"),
 insert into Carrera(fecha,hora,cantidadVueltas,pistaID)
 values("2022-06-06","00:10:00.000",73,1);
 
-insert into detalleCarerraPilotos(carreraID,posicionPiloto,pilotoID,vehiculoID)
-values(1,1,1,2);
+insert into detalleCarreraPilotos(carreraID,posicionPiloto,pilotoID,vehiculoID)
+values(1,1,1,2),
+(1,2,2,3),
+(1,3,3,3),
+(1,4,4,3);
+
 
 DELIMITER $$
 
@@ -295,6 +299,22 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `EliminarUsuario`(IN `pusuarioID` IN
 BEGIN
 	
     DELETE FROM usuario WHERE usuarioID = pusuarioID;
+    
+
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ConsultarInfoCarrera`()
+BEGIN
+	
+    SELECT posicionPiloto, concat(substring(nombre,1,1),'. ',apellido) as nombre, modelo  from detallecarrerapilotoS
+		INNER JOIN PILOTO
+        ON DETALLECARRERAPILOTOS.PILOTOID = PILOTO.PILOTOID
+			INNER JOIN USUARIO
+            ON PILOTO.USUARIOID = USUARIO.USUARIOID
+				INNER JOIN VEHICULO
+                ON DETALLECARRERAPILOTOS.VEHICULOID = VEHICULO.VEHICULOID;
     
 
 END$$
