@@ -216,7 +216,7 @@ DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `RegistroUsuario`(IN `pCorreo` VARCHAR(25), IN `pContrasenna` VARCHAR(25), IN `pNombre` VARCHAR(25), IN `pApellido` VARCHAR(25), IN `pEdad` INT,  IN `pRol` INT)
 BEGIN
 
-INSERT INTO usuarios (correo, contrasena, nombre, apellido, edad, rolID)
+INSERT INTO usuario (correo, contrasena, nombre, apellido, edad, rolID)
 VALUES(pCorreo, pContrasenna, pNombre, pApellido, pEdad, pRol);
 
 END$$
