@@ -18,7 +18,8 @@
     <link rel="icon" href="../img/logo.png">
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
     <link href="../css/stop-watch.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b297c62494.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
@@ -42,7 +43,11 @@
                 <div class="col">
 
                     <div id="controls">
-                        <button id="reset"><i class="fa-solid fa-stop"></i></button>
+                        <?php
+if ($_SESSION["RolUsuario"] == "1") {
+    echo '<button id="reset"><i class="fa-solid fa-stop"></i></button>';
+}
+?>
                     </div>
 
                 </div>
@@ -70,10 +75,12 @@
                 <div class="col">
 
                     <div id="controls">
-
-                        <button id="stop"><i class="fa-solid fa-pause"></i></i></button>
-                        <button id="start"><i class="fa-solid fa-play"></i></button>
-
+                        <?php
+if ($_SESSION["RolUsuario"] == "1") {
+    echo '<button id="stop"><i class="fa-solid fa-pause"></i></i></button>
+        <button id="start"><i class="fa-solid fa-play"></i></button>';
+}
+?>
                     </div>
 
                 </div>
