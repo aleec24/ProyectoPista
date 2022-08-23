@@ -1,78 +1,86 @@
 <?php
 
-
-//include_once '../Controller/LoginController.php';
-
 function MostrarHeader()
 {
-
-    //$_SESSION["RolUsuario"] = $item["rolID"];
-    /*
-
-    if ($_SESSION["RolUsuario"] == "1") {
-        echo '<h1> pruiebasasdasas </h1>';
-    } 
-    */
-
-    
-    
-   
+    echo '
+    <header>
+        <a class="logo" href="inicio.php"><label class="logox">Racing</label></a>
+        <nav>
+            <ul class="nav__links">';
 
     echo '
-  <header>
-            <a class="logo" href="inicio.php"><label class="logox">Racing</label></a>
-            <nav>
-                <ul class="nav__links">
-                    <li class="fa-solid fa-house"><a href="inicio.php">
-                    <div class="menu-items">
-                        Home
-                      </div>
-                    </a>
-                    </li>
-                    <li class="fa-solid fa-people-group"><a href="Usuarios.php">
-                    <div class="menu-items">
-                        Usuarios
+                <li class="fa-solid fa-house">
+                    <a href="inicio.php">
+                        <div class="menu-items">
+                            Home
                         </div>
                     </a>
-                </li>
+                </li>';
 
-                
-                    <li class="fa-solid fa-people-group"><a href="Pilotos.php">
-                    <div class="menu-items">
-                        Pilotos
+    session_start();
+    if ($_SESSION["RolUsuario"] == "1") {
+        echo '
+                    <li class="fa-solid fa-people-group">
+                        <a href="Usuarios.php">
+                            <div class="menu-items">
+                                Usuarios
+                            </div>
+                        </a>
+                    </li>';
+
+        echo '
+                    <li class="fa-solid fa-people-group">
+                        <a href="Pilotos.php">
+                            <div class="menu-items">
+                                Pilotos
+                            </div>
+                        </a>
+                    </li>';
+
+        echo '
+                    <li class="fa-solid fa-flag-checkered">
+                        <a href="Carreras.php">
+                            <div class="menu-items">
+                                Carreras
+                            </div>
+                        </a>
+                    </li>';
+
+        echo '
+                    <li class="fa-solid fa-road">
+                        <a href="Pistas.php">
+                            <div class="menu-items">
+                                Pistas
+                            </div>
+                        </a>
+                    </li>';
+
+        echo '
+                    <li class="fa-solid fa-car-rear">
+                        <a href="Vehiculos.php">
+                            <div class="menu-items">
+                                Vehiculos
+                            </div>
+                        </a>   
+                    </li>';
+    }
+
+    echo '
+                <li class="fa-solid fa-user">
+                    <a href="Cuenta.php">
+                        <div class="menu-items">
+                            Mi cuenta
                         </div>
                     </a>
-                </li>
-                    <li class="fa-solid fa-flag-checkered"><a href="Carreras.php">
-                    <div class="menu-items">
-                        Carreras
-                        </div>
-                    </a>
-                </li>
-                    <li class="fa-solid fa-road"><a href="Pistas.php">
-                    <div class="menu-items">
-                        Pistas
-                        </div>
-                    </a>
-                </li>
-                    <li class="fa-solid fa-car-rear"><a href="Vehiculos.php">
-                    <div class="menu-items">
-                        Vehiculos
-                        </div>
-                    </a>   
-                </li>
-                    <li class="fa-solid fa-user"><a href="Cuenta.php">
-                    <div class="menu-items">
-                        Mi cuenta
-                        </div>
-                    </a>
-                    
-                </li>
-                </ul>
-            </nav>
-            <a class="cta" href="login.php">Log out</a>
-            <p class="menu cta">Menu</p>
-        </header>
+                </li>';
+
+    echo '  </ul>
+        </nav>
+        <a class="cta" href="login.php">Cerrar Sesión</a>
+        <p class="menu cta">Menu</p>
+    </header>';
+
+    echo '
         <div class="overlay">
             <a class="close">&times;</a>
             <div class="overlay__content">
@@ -86,9 +94,6 @@ function MostrarHeader()
             </div>
         </div>
   ';
-
-        
-    
 }
 
 function Notificar($destinatario, $asunto, $cuerpo)
