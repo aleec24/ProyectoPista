@@ -52,7 +52,7 @@
                     <?php ConsultarUsuarios(); ?>
                 </tbody>
             </table>
-            <a href="RegistroUsuarios.php" class="btn btn-info">Crear Usuario</a>
+            <a href="RegistroUsuarios.php" class="cta">Agregar Usuario</a>
 
 
         </div>

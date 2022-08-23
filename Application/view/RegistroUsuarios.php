@@ -30,73 +30,79 @@
     <br>
     <form action="" method="POST">
 
-        <div id="page-content-wrapper" class="container-fluid">
+        <div id="page-content-wrapper" class="container">
 
 
 
             <br>
             <br>
             <br /><br />
-
-            <div class="row">
-
-                <div class="col-1">
+            
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4" style="color:white">Correo Electronico</label>
+                        <input type="email" class="form-control" id="input" placeholder="Correo Electronico">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputPassword4" style="color:white">Contraseña</label>
+                        <input type="password" class="form-control " id="input" placeholder="Contraseña">
+                    </div>
                 </div>
-
-                <div class="col-3" style="color:white">
-                    Correo
-                    <input type="text" name="txtCorreo" class="form-control" Value="" required>
+                <div class="form-group">
+                    <label style="color:white">Nombre</label>
+                    <input type="text" class="form-control" id="input" placeholder="Nombre">
                 </div>
-                <div class="col-3" style="color:white">
-                    Contraseña
-                    <input type="text" name="txtContrasenna" class="form-control" Value="" required>
+                <div class="form-group">
+                    <label  style="color:white">Apellido</label>
+                    <input type="text" class="form-control" id="input" placeholder="Apellido">
                 </div>
-                <div class="col-3" style="color:white">
-                    Nombre
-                    <input type="text" name="txtNombre" class="form-control" Value="" required>
+                <div class="form-row">
+                    <div class="form-group col-md-2">
+                        <label for="inputAge" style="color:white">Edad</label>
+                        <input type="text" class="form-control" id="input" placeholder="Edad">
+                    </div>
                 </div>
+                <button type="submit" class="cta">Registrar Usuario</button>
+           
+
+            <br>
+            <br>
+            <br>
 
 
+            <div class="col-3" style="color:white">
+                Correo
+                <input type="text" name="txtCorreo" class="form-control" Value="" required>
+            </div>
+            <div class="col-3" style="color:white">
+                Contraseña
+                <input type="text" name="txtContrasenna" class="form-control" Value="" required>
+            </div>
+            <div class="col-3" style="color:white">
+                Nombre
+                <input type="text" name="txtNombre" class="form-control" Value="" required>
             </div>
 
-            <br />
-
-            <div class="row">
-
-                <div class="col-1">
-                </div>
 
 
-                <div class="col-3" style="color:white">
-                    Apellido
-                    <input type="text" name="txtApellido" class="form-control" Value="" required>
-                </div>
 
-                <div class="col-3" style="color:white">
-                    Edad
-                    <input type="text" name="txtEdad" class="form-control" Value="" required>
-                </div>
-                <div class="col-3" style="color:white">
-                    <label>Rol</label>
-                    <select name="txtRol" class="form-control" required>
-                        <?php
-                        ConsultarRoles($Usuario["rolID"]);
-                        ?>
-                    </select>
-                </div>
-
+            <div class="col-3" style="color:white">
+                Apellido
+                <input type="text" name="txtApellido" class="form-control" Value="" required>
             </div>
 
-            <div class="row">
-
-                <div class="col-1">
-                </div>
-                <div class="col-3">
-                    <br />
-                    <input type="submit" name="btnRegistrar" Value="Registrar" class="btn btn-info">
-                </div>
-
+            <div class="col-3" style="color:white">
+                Edad
+                <input type="text" name="txtEdad" class="form-control" Value="" required>
             </div>
+            <div class="col-3">
+                <br />
+                <input type="submit" name="btnRegistrarUsuario" Value="Registrar" class="btn btn-info">
+            </div>
+
+
+
+
 
 
 

@@ -13,12 +13,26 @@ function ConsultarUsuarios()
         echo "<td>" . $item["apellido"] . "</td>";
         echo "<td>" . $item["edad"] . "</td>";
         echo "<td>" . $item["rolID"] . "</td>";
-        echo '<td>
-                    <a class="btn" style="color:white" href="ActualizarUsuario.php?q=' . $item["usuarioID"] . '">Actualizar</a>
-                    <input type="button" class="btn" style="color:white" value="Eliminar" 
-                    onclick="EliminarUsuario(' . $item["usuarioID"]. ')">
+        if($item["rolID"] == 2){
+            echo '<td>
+                    <a class="btn" style="color:white" href="ActualizarUsuario.php?q=' . $item["usuarioID"] . '">Actualizar Usuario</a>
+                    
+                    <input type="button" class="btn" style="color:white" value="Eliminar" onclick="EliminarUsuario(' . $item["usuarioID"]. ')">
+
+                    <a class="btn" style="color:white" href="ActualizarPilotos.php?q=' . $item["usuarioID"] . '">Actualizar Piloto</a>
                   </td>';
             echo "</tr>";
+        }else{
+            echo '<td>
+                    <a class="btn" style="color:white" href="ActualizarUsuario.php?q=' . $item["usuarioID"] . '">Actualizar Usuario</a>
+                    
+                    <input type="button" class="btn" style="color:white" value="Eliminar" onclick="EliminarUsuario(' . $item["usuarioID"]. ')">
+
+                    <a class="btn" style="color:white" href="RegistroPilotos.php?q=' . $item["usuarioID"] . '">Crear Piloto</a>
+                  </td>';
+            echo "</tr>";
+        }
+        
         echo "</tr>";
     }
 }
@@ -98,14 +112,14 @@ function ConsultarVehiculos()
         }
     }  
 
-    if(isset($_POST['btnRegistrar']))
+    if(isset($_POST['btnRegistrarUsuario']))
     {
         $correo = $_POST["txtCorreo"]; 
         $contrasena = $_POST["txtContrasenna"]; 
         $nombre = $_POST["txtNombre"];
         $apellido = $_POST["txtApellido"];
         $edad = $_POST["txtEdad"];
-        $rolID = $_POST["txtRol"];
+        $rolID = 3;
         
         RegistrarUsuariosModel($correo, $contrasena, $nombre, $apellido, $edad, $rolID);
         header("Location: ../View/Usuarios.php");
@@ -129,6 +143,25 @@ function ConsultarVehiculos()
             echo "</tr>";
         } 
 
+    }
+
+    if(isset($_POST['btnRegistrarPiloto']))
+    {
+        $usuarioID = $_POST["txtUsuarioID"];
+        $puntos = $_POST["txtPuntos"]; 
+        $victorias = $_POST["txtVictorias"]; 
+        $podios = $_POST["txtPodios"];
+        
+        
+        RegistrarPilotosModel($usuarioID, $puntos, $victorias, $podios);
+        header("Location: ../View/Pilotos.php");
+    }
+
+    function ConsultarPiloto($usuarioID)
+    {       
+        $Usuario = ConsultarPilotoModel($usuarioID);
+        $item = mysqli_fetch_array($Usuario);
+        return $item;
     }
 
 
