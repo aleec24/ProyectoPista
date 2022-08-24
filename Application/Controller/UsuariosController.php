@@ -93,7 +93,26 @@ function ConsultarVehiculos()
         $Usuario = ConsultarUsuarioModel($usuarioID);
         $item = mysqli_fetch_array($Usuario);
         return $item;
-    }  
+    }
+
+    function ConsultarUsuarioLewis()
+    {       
+        $Usuario = ConsultarUsuarioLewisModel();
+        $item = mysqli_fetch_array($Usuario);
+
+        echo '<div class="col-4">';
+        echo '</div>';            
+        echo '<div class="col-4">';                
+        echo '<button type="button" class="btn btn-dark btn-lg btn-block">'. $item['nombreCompleto'] .'</button>';
+        echo '<button type="button" class="btn btn-dark btn-lg btn-block">'. $item['edad'] .'</button>';
+        echo '<button type="button" class="btn btn-dark btn-lg btn-block">'. $item['correo'] .'</button>';
+        echo '</div>';
+        echo '<div class="col-4">';       
+        echo '</div>;';
+            
+    }
+    
+    
 
     if(isset($_POST['btnActualizar']))
     {

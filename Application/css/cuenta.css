@@ -1,0 +1,37 @@
+:root {
+    --primary: darkred;
+    --dark: rgb(48, 48, 48);
+    --darkest: black;
+    --light: white;
+}
+
+#cajaImagenUsuario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#imgUsuario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    appearance: none;
+    border: none;
+    outline: none;    
+    
+
+    color: var(--primary);
+    background-color: var(--darkest);
+    border: 3px solid var(--light);
+    font-size: 4rem;
+    margin: 1rem 9rem 1rem auto;
+    
+
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+
+
+    transition: 0.4s;
+}

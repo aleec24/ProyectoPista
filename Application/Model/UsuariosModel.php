@@ -53,6 +53,14 @@ function ConsultarUsuarioModel($usuarioID)
     return $Usuario;
 }
 
+function ConsultarUsuarioLewisModel()
+{
+    $instancia = AbrirBaseDatos();
+    $Usuario = $instancia->query("CALL ConsultarUsuarioLewis();");
+    CerrarBaseDatos($instancia);
+    return $Usuario;
+}
+
 function ConsultarRolesModel()
 {
     $instancia = AbrirBaseDatos();
