@@ -23,6 +23,7 @@
     <link href="../css/stop-watch.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b297c62494.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    
 
 </head>
 

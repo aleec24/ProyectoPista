@@ -117,3 +117,9 @@ function Notificar($destinatario, $asunto, $cuerpo)
     $mail->AddAddress($destinatario, 'USER');
     $mail->send();
 }
+function mostrarFooter() 
+{
+    echo'';
+    
+
+}
