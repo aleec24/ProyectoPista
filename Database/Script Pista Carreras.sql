@@ -356,5 +356,22 @@ BEGIN
 END$$
 DELIMITER ;
 
+DELIMITER $$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ConsultarUsuarioLewis`()
+BEGIN
+
+	SELECT concat(nombre," ",apellido) as nombreCompleto, edad, correo FROM Usuario where usuarioID = 2;
+	
+
+END$$
+DELIMITER ;
+
+DELIMITER $$
+
+call ConsultarUsuarioLewis();
+
+
+
 
 
