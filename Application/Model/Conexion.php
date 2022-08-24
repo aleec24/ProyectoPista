@@ -2,7 +2,7 @@
 
 function AbrirBaseDatos()
 {
-    $server = "localhost:3306";
+    $server = "localhost:3307";
     $user = "root";
     $password = "";
     $database = "PistaCarreras";

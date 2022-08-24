@@ -1,8 +1,10 @@
+DROP DATABASE PistaCarreras;
+-----------------------------
+
 create database PistaCarreras;
 
 use PistaCarreras;
 
-DROP DATABASE PistaCarreras;
 
 create table Rol(
 	rolID int auto_increment NOT NULL,
@@ -234,7 +236,7 @@ DELIMITER ;
 
 
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `ActualizarUsuario`(IN `pusuarioID` INT, IN `pcorreo` VARCHAR(25), IN `pcontrasena` VARCHAR(20), IN pnombre VARCHAR(20), IN papellido VARCHAR(20), IN pedad INT, IN prolID INT)
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ActualizarUsuario`(IN `pusuarioID` INT, IN `pcorreo` VARCHAR(25), IN `pcontrasena` VARCHAR(20), IN pnombre VARCHAR(20), IN papellido VARCHAR(20), IN pedad INT)
 BEGIN
 
 	UPDATE usuario
@@ -242,8 +244,8 @@ BEGIN
 		contrasena = pcontrasena,
 		nombre = pnombre,
         apellido = papellido,
-        edad = pedad,
-		rolID = prolID
+        edad = pedad
+		
 	WHERE usuarioID = pusuarioID;
 
 END$$
@@ -311,8 +313,7 @@ END$$
 DELIMITER ;
 
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `RegistrarPilotos`
-(IN pusuarioID INT, IN ppuntos INT, IN pvictorias INT, IN ppodios INT)
+CREATE DEFINER=`root`@`localhost` PROCEDURE `RegistrarPilotos`(IN pusuarioID INT, IN ppuntos INT, IN pvictorias INT, IN ppodios INT)
 
 BEGIN
 
@@ -341,3 +342,19 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `ConsultarPiloto` (IN `pusuarioID` I
 END$$
 
 DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ActualizaPiloto`(IN pusuarioID INT, IN ppuntos INT, IN pvictorias INT, IN ppodios INT)
+BEGIN
+
+	UPDATE piloto
+	SET puntos = ppuntos,
+		victorias = pvictorias,
+		podios = ppodios
+	WHERE usuarioID = pusuarioID;
+
+END$$
+DELIMITER ;
+
+
+
