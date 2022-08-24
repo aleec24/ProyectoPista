@@ -30,86 +30,70 @@
     <br>
     <form action="" method="POST">
 
+        <br>
+        <br>
+
         <div id="page-content-wrapper" class="container">
 
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th style="text-align:center;">Registro de Usuarios</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputEmail4" style="color:white">Correo Electronico</label>
+                                    <input type="email" class="form-control" name="txtCorreo" placeholder="Correo Electronico" Value="" required>
+                                </div>
 
+                                <div class="form-group col-md-6">
+                                    <label for="inputPassword4" style="color:white">Contraseña</label>
+                                    <input type="password" class="form-control " name="txtContrasenna" placeholder="Contraseña" Value="" required>
+                                </div>
 
-            <br>
-            <br>
-            <br /><br />
-            
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="inputEmail4" style="color:white">Correo Electronico</label>
-                        <input type="email" class="form-control" id="input" placeholder="Correo Electronico">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="inputPassword4" style="color:white">Contraseña</label>
-                        <input type="password" class="form-control " id="input" placeholder="Contraseña">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label style="color:white">Nombre</label>
-                    <input type="text" class="form-control" id="input" placeholder="Nombre">
-                </div>
-                <div class="form-group">
-                    <label  style="color:white">Apellido</label>
-                    <input type="text" class="form-control" id="input" placeholder="Apellido">
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-2">
-                        <label for="inputAge" style="color:white">Edad</label>
-                        <input type="text" class="form-control" id="input" placeholder="Edad">
-                    </div>
-                </div>
-                <button type="submit" class="cta">Registrar Usuario</button>
-           
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label style="color:white">Nombre</label>
+                                    <input type="text" class="form-control" name="txtNombre" placeholder="Nombre" Value="" required>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
 
-            <br>
-            <br>
-            <br>
-
-
-            <div class="col-3" style="color:white">
-                Correo
-                <input type="text" name="txtCorreo" class="form-control" Value="" required>
-            </div>
-            <div class="col-3" style="color:white">
-                Contraseña
-                <input type="text" name="txtContrasenna" class="form-control" Value="" required>
-            </div>
-            <div class="col-3" style="color:white">
-                Nombre
-                <input type="text" name="txtNombre" class="form-control" Value="" required>
-            </div>
-
-
-
-
-            <div class="col-3" style="color:white">
-                Apellido
-                <input type="text" name="txtApellido" class="form-control" Value="" required>
-            </div>
-
-            <div class="col-3" style="color:white">
-                Edad
-                <input type="text" name="txtEdad" class="form-control" Value="" required>
-            </div>
-            <div class="col-3">
-                <br />
-                <input type="submit" name="btnRegistrarUsuario" Value="Registrar" class="btn btn-info">
-            </div>
-
-
-
-
-
-
+                    <tr>
+                        <td>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label style="color:white">Apellido</label>
+                                    <input type="text" class="form-control" name="txtApellido" placeholder="Apellido" Value="" required>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-row">
+                                <div class="form-group col-md-2">
+                                    <label for="inputAge" style="color:white">Edad</label>
+                                    <input type="number" class="form-control" name="txtEdad" min="18" max="70" placeholder="Edad" Value="" required>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </thead>
+            </table>
+            <input type="submit" name="btnRegistrarUsuario" class="cta" Value="Registrar Usuario">
+            <input type="button" class="cta" onClick="location.href='Usuarios.php'" Value="Cancelar">
 
 
         </div>
-
-
 
 
 

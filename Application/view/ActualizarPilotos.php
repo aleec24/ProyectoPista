@@ -33,58 +33,52 @@ $Usuario = ConsultarPiloto($ID);
     <br>
     <form action="" method="POST">
 
-        <div id="page-content-wrapper" class="container-fluid">
+        <br>
+        <br>
 
+        <div id="page-content-wrapper" class="container">
 
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th style="text-align:center;">Registro de Pilotos</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label style="color:white">ID de Usuario</label>
+                                    <input type="text" class="form-control" name="txtUsuarioID" Value="<?php echo $Usuario["usuarioID"]; ?>" required readonly="true">
+                                </div>
 
-            <br>
-            <br>
-            <br /><br />
+                                <div class="form-group col-md-6">
+                                    <label style="color:white">Puntos</label>
+                                    <input type="number" class="form-control " name="txtPuntos" Value="<?php echo $Usuario["puntos"]; ?>" required>
+                                </div>
 
-            <div class="row">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label style="color:white">Victorias</label>
+                                    <input type="number" class="form-control" name="txtVictorias" Value="<?php echo $Usuario["victorias"]; ?>" required>
+                                </div>
 
-                <div class="col-1">
-                </div>
+                                <div class="form-group col-md-6">
+                                    <label style="color:white">Podios</label>
+                                    <input type="number" class="form-control " name="txtPodios" Value="<?php echo $Usuario["podios"]; ?>" required>
+                                </div>
 
-                <div class="col-3" style="color:white">
-                    ID Usuario
-                    <input type="text" name="txtUsuarioID" class="form-control" Value="<?php echo $Usuario["usuarioID"]; ?>" required readonly="true">
-                </div>
-                <div class="col-3" style="color:white">
-                    Puntos
-                    <input type="text" name="txtPuntos" class="form-control" Value="<?php echo $Usuario["puntos"]; ?>" required>
-                </div>
-                <div class="col-3" style="color:white">
-                    Victorias
-                    <input type="text" name="txtVictorias" class="form-control" Value="<?php echo $Usuario["victorias"]; ?>" required>
-                </div>
-
-
-            </div>
-
-            <br />
-
-            <div class="row">
-
-                <div class="col-1">
-                </div>
-
-
-                <div class="col-3" style="color:white">
-                    Podios
-                    <input type="text" name="txtPodios" class="form-control" Value="<?php echo $Usuario["podios"]; ?>" required>
-                </div>
-
-                <div class="col-3">
-                    <br />
-                    <input type="submit" name="btnRegistrarPiloto" Value="Registrar" class="btn btn-info">
-                </div>
-
-            </div>
-
-            
-
-
+                            </div>
+                        </td>
+                    </tr>
+                </thead>
+            </table>
+            <input type="submit" name="btnActualizarPiloto" class="cta" Value="Actualizar Piloto">
+            <input type="button" class="cta" onClick="location.href='Usuarios.php'" Value="Cancelar">
 
 
         </div>

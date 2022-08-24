@@ -35,11 +35,11 @@ create table Vehiculo(
 
 create table Piloto(
 	pilotoID int auto_increment NOT NULL,
+    usuarioID int NOT NULL,  
     puntos int,
     victorias int,
     podios int,
-    usuarioID int NOT NULL,    
-    
+      
     primary key (pilotoID),
     foreign key (usuarioID) references Usuario(usuarioID)
 );
@@ -100,13 +100,16 @@ insert into Usuario(correo,contrasena,nombre,apellido,edad,rolID)
 values("admin@mail.com","0000","Admin","Pista",50,1),
 ("lhamilton@mail.com","1234","Lewis","Hamilton",37,2),
 ("mverstappen@mail.com","1234","Max","Verstappen",24,2),
-("sperez@mail.com","1234","Sergio","Pérez",32,3),
-("cleclerc@mail.com","1234","Charles","Leclerc",24,3),
-("clark@mail.com","1234","Clark","Kent",42,2),
-("bruce@mail.com","1234","Bruce","Wayne",40,2),
-("barry@mail.com","1234","Barry","Allen",22,2),
-("oliver@mail.com","1234","Oliver","Queen",45,3),
-("howard@mail.com","1234","Howard","Hamlin",50,3);
+("sperez@mail.com","1234","Sergio","Pérez",32,2),
+("cleclerc@mail.com","1234","Charles","Leclerc",24,2),
+("clark@mail.com","1234","Clark","Kent",42,3),
+("bruce@mail.com","1234","Bruce","Wayne",40,3);
+
+insert into Piloto(usuarioID, puntos,victorias,podios)
+values(2,109,23,186),
+(3,208,26,68),
+(4,170,5,18),
+(5,344,35,19);
 
 insert into Vehiculo(modelo)
 values("Mercedes W13"),
@@ -119,21 +122,6 @@ values("Mercedes W13"),
 ("AlphaTauri AT03"),
 ("Ferrari F1-75");
 
-insert into Piloto(puntos,victorias,podios,usuarioID)
-values(109,23,186,2),
-(208,26,68,3),
-(151,3,21,4),
-(170,5,18,5),
-(1,1,10,6),
-(344,35,19,7),
-(151,3,9,8),
-(133,1,12,9),
-(180,20,15,10),
-(43,14,10,6),
-(163,321,58,6), 
-(23,21,40,6),
-(3,1,1,6),
-(13,56,5,6);
 
 
 insert into Pista(nombrePista,cantidadPilotos,recordVuelta,distanciaTotal)
@@ -298,7 +286,9 @@ DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `EliminarUsuario`(IN `pusuarioID` INT)
 BEGIN
 	
+    SET FOREIGN_KEY_CHECKS=0;
     DELETE FROM usuario WHERE usuarioID = pusuarioID;
+    SET FOREIGN_KEY_CHECKS=1;
     
 
 END$$
@@ -320,3 +310,34 @@ BEGIN
 END$$
 DELIMITER ;
 
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `RegistrarPilotos`
+(IN pusuarioID INT, IN ppuntos INT, IN pvictorias INT, IN ppodios INT)
+
+BEGIN
+
+    SET FOREIGN_KEY_CHECKS=0;
+    
+    UPDATE usuario
+    SET rolID= 2
+    WHERE usuarioID = pusuarioID;
+    
+    INSERT INTO Piloto(usuarioID,puntos,victorias,podios)
+    VALUES(pusuarioID,ppuntos,pvictorias,ppodios);
+    
+    SET FOREIGN_KEY_CHECKS=1;
+
+END$$
+DELIMITER ;
+
+DELIMITER $$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ConsultarPiloto` (IN `pusuarioID` INT)   BEGIN
+
+	SELECT	usuarioID, puntos, victorias, podios
+    FROM 	piloto
+    WHERE 	usuarioID = pusuarioID;
+
+END$$
+
+DELIMITER ;

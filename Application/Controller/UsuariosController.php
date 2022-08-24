@@ -22,13 +22,19 @@ function ConsultarUsuarios()
                     <a class="btn" style="color:white" href="ActualizarPilotos.php?q=' . $item["usuarioID"] . '">Actualizar Piloto</a>
                   </td>';
             echo "</tr>";
-        }else{
+        }else if($item["rolID"] == 3){
             echo '<td>
                     <a class="btn" style="color:white" href="ActualizarUsuario.php?q=' . $item["usuarioID"] . '">Actualizar Usuario</a>
                     
                     <input type="button" class="btn" style="color:white" value="Eliminar" onclick="EliminarUsuario(' . $item["usuarioID"]. ')">
 
                     <a class="btn" style="color:white" href="RegistroPilotos.php?q=' . $item["usuarioID"] . '">Crear Piloto</a>
+                  </td>';
+            echo "</tr>";
+        }else{
+            echo '<td>
+                    <a class="btn" style="color:white" href="ActualizarUsuario.php?q=' . $item["usuarioID"] . '">Actualizar Usuario</a>
+
                   </td>';
             echo "</tr>";
         }
@@ -97,9 +103,9 @@ function ConsultarVehiculos()
         $nombre = $_POST["txtNombre"];
         $apellido = $_POST["txtApellido"];
         $edad = $_POST["txtEdad"];
-        $rolID = $_POST["txtRol"];
         
-        ActualizarUsuariosModel($usuarioID, $correo, $contrasena, $nombre, $apellido, $edad, $rolID);
+        
+        ActualizarUsuariosModel($usuarioID, $correo, $contrasena, $nombre, $apellido, $edad);
         header("Location: ../View/Usuarios.php");
     }
 
@@ -162,6 +168,17 @@ function ConsultarVehiculos()
         $Usuario = ConsultarPilotoModel($usuarioID);
         $item = mysqli_fetch_array($Usuario);
         return $item;
+    }
+
+    if(isset($_POST['btnActualizarPiloto']))
+    {
+        $usuarioID = $_POST["txtUsuarioID"];
+        $puntos = $_POST["txtPuntos"]; 
+        $victorias = $_POST["txtVictorias"]; 
+        $podios = $_POST["txtPodios"];
+        
+        ActualizarPilotosModel($usuarioID, $puntos, $victorias, $podios);
+        header("Location: ../View/Pilotos.php");
     }
 
 

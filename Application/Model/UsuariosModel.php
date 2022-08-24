@@ -38,10 +38,10 @@ function ConsultarPistasModel()
     return $listaCodigos;
 }
 
-function ActualizarUsuariosModel($usuarioID, $correo, $contrasena, $nombre, $apellido, $edad, $rolID)
+function ActualizarUsuariosModel($usuarioID, $correo, $contrasena, $nombre, $apellido, $edad)
 {
     $instancia = AbrirBaseDatos();
-    $instancia->query("CALL ActualizarUsuario($usuarioID, '$correo', '$contrasena', '$nombre', '$apellido', $edad, $rolID);");
+    $instancia->query("CALL ActualizarUsuario($usuarioID, '$correo', '$contrasena', '$nombre', '$apellido', $edad);");
     CerrarBaseDatos($instancia);
 }
 
@@ -97,4 +97,11 @@ function ConsultarPilotoModel($usuarioID)
     $Usuario = $instancia->query("CALL ConsultarPiloto('$usuarioID');");
     CerrarBaseDatos($instancia);
     return $Usuario;
+}
+
+function ActualizarPilotosModel($usuarioID, $puntos, $victorias, $podios)
+{
+    $instancia = AbrirBaseDatos();
+    $instancia->query("CALL ActualizaPiloto($usuarioID, $puntos, $victorias, $podios);");
+    CerrarBaseDatos($instancia);
 }

@@ -27,8 +27,9 @@ function MostrarHeader()
                             </div>
                         </a>
                     </li>';
+    }
 
-        echo '
+    echo '
                     <li class="fa-solid fa-people-group">
                         <a href="Pilotos.php">
                             <div class="menu-items">
@@ -37,7 +38,7 @@ function MostrarHeader()
                         </a>
                     </li>';
 
-        echo '
+    echo '
                     <li class="fa-solid fa-flag-checkered">
                         <a href="Carreras.php">
                             <div class="menu-items">
@@ -46,7 +47,7 @@ function MostrarHeader()
                         </a>
                     </li>';
 
-        echo '
+    echo '
                     <li class="fa-solid fa-road">
                         <a href="Pistas.php">
                             <div class="menu-items">
@@ -55,7 +56,7 @@ function MostrarHeader()
                         </a>
                     </li>';
 
-        echo '
+    echo '
                     <li class="fa-solid fa-car-rear">
                         <a href="Vehiculos.php">
                             <div class="menu-items">
@@ -63,7 +64,7 @@ function MostrarHeader()
                             </div>
                         </a>   
                     </li>';
-    }
+
 
     echo '
                 <li class="fa-solid fa-user">

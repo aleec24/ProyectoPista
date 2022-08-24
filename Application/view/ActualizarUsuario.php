@@ -32,79 +32,81 @@ $Usuario = ConsultarUsuario($ID);
     <?php MostrarHeader(); ?>
     <br>
     <form action="" method="POST">
+        <br>
+        <br>
 
-        <div id="page-content-wrapper" class="container-fluid">
+        <div id="page-content-wrapper" class="container">
 
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th style="text-align:center;">Actualización de Usuarios</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label style="color:white">ID de Usuario</label>
+                                    <input type="text" class="form-control" name="txtUsuarioID" Value="<?php echo $Usuario["usuarioID"]; ?>" required readonly="true">
+                                </div>
+                            </div>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputEmail4" style="color:white">Correo Electronico</label>
+                                    <input type="email" class="form-control" name="txtCorreo" Value="<?php echo $Usuario["correo"]; ?>" required>
+                                </div>
 
+                                <div class="form-group col-md-6">
+                                    <label for="inputPassword4" style="color:white">Contraseña</label>
+                                    <input type="password" class="form-control " name="txtContrasenna" Value="<?php echo $Usuario["contrasena"]; ?>" required>
+                                </div>
 
-            <br>
-            <br>
-            <br /><br />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label style="color:white">Nombre</label>
+                                    <input type="text" class="form-control" name="txtNombre" Value="<?php echo $Usuario["nombre"]; ?>" required>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
 
-            <div class="row">
-
-                <div class="col-1">
-                </div>
-                <div class="col-3" style="color:white">
-                    ID Usuario
-                    <input type="text" name="txtUsuarioID" class="form-control" Value="<?php echo $Usuario["usuarioID"]; ?>" required readonly="true">
-                </div>
-                <div class="col-3" style="color:white">
-                    Correo
-                    <input type="text" name="txtCorreo" class="form-control" Value="<?php echo $Usuario["correo"]; ?>" required>
-                </div>
-                <div class="col-3" style="color:white">
-                    Contraseña
-                    <input type="text" name="txtContrasenna" class="form-control" Value="<?php echo $Usuario["contrasena"]; ?>" required>
-                </div>
-
-
-            </div>
-
-            <br />
-
-            <div class="row">
-
-                <div class="col-1">
-                </div>
-                <div class="col-3" style="color:white">
-                    Nombre
-                    <input type="text" name="txtNombre" class="form-control" Value="<?php echo $Usuario["nombre"]; ?>" required>
-                </div>
-
-                <div class="col-3" style="color:white">
-                    Apellido
-                    <input type="text" name="txtApellido" class="form-control" Value="<?php echo $Usuario["apellido"]; ?>" required>
-                </div>
-
-                <div class="col-3" style="color:white">
-                    Edad
-                    <input type="text" name="txtEdad" class="form-control" Value="<?php echo $Usuario["edad"]; ?>" required>
-                </div>
-
-            </div>
-
-            <div class="row">
-
-                <div class="col-1">
-                </div>
-                
-                <div class="col-3">
-                    <br />
-                    <input type="submit" name="btnActualizar" Value="Actualizar" class="btn btn-info">
-                </div>
-                
-
-            </div>
-
-
+                    <tr>
+                        <td>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label style="color:white">Apellido</label>
+                                    <input type="text" class="form-control" name="txtApellido" Value="<?php echo $Usuario["apellido"]; ?>" required>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-row">
+                                <div class="form-group col-md-2">
+                                    <label for="inputAge" style="color:white">Edad</label>
+                                    <input type="number" class="form-control" name="txtEdad" min="18" max="70" placeholder="Edad" Value="<?php echo $Usuario["edad"]; ?>" required>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </thead>
+            </table>
+            <input type="submit" name="btnActualizar" class="cta" Value="Actualizar Usuario">
+            <input type="button" class="cta" onClick="location.href='Usuarios.php'" Value="Cancelar">
 
 
         </div>
-
-
-
-
 
         <script type="text/javascript" src="../js/mobile.js"></script>
         <script src="../vendor/jquery/jquery.min.js"></script>
